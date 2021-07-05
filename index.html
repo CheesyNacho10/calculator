@@ -7,7 +7,7 @@
     </head>
     <body>
         <div id="calculator">
-            <h1 id="res"></h1>
+            <h1 id="res">0</h1>
             <div id="buttons">
                 <button class="operator" id="allClear" onclick="fullClear()"><strong>AC</strong></button>
                 <button class="operator" id="clear" onclick="erase()"><strong>C</strong></button>
@@ -26,7 +26,7 @@
                 <button class="operator" id="three" onclick="number(3)"><strong>3</strong></button>
                 <button class="operator" id="mult" onclick="operation('*')"><strong>x</strong></button>
                 <button class="operator" id="zero" onclick="number(0)"><strong>0</strong></button>
-                <button class="operator" id="dot"><strong>.</strong></button>
+                <button class="operator" id="dot" onclick="decimal()"><strong>.</strong></button>
                 <button class="operator" id="eq" onclick="res()"><strong>=</strong></button>
             </div>
         </div>
