@@ -55,6 +55,27 @@ body {
     background-color: aquamarine;
 }
 
+.digit {
+    height: 100px;
+    width: 1fr;
+    
+    background-color: lightcyan;
+    font-size: xx-large;
+    border-radius: 8px;
+}
+
+.digit:hover {
+    background-color: lightgray;
+}
+
+#eq {
+    background-color: greenyellow;
+}
+
+#eq:hover {
+    background-color: red;
+}
+
 #allClear { grid-area: ac; }
 #clear { grid-area: c; }
 #percen { grid-area: per; }

@@ -97,7 +97,15 @@ function fullClear() {
  * Removes the las digit from the display and refreshes the display
  */
 function erase() {
-    
+    if(!dot) {
+        dispNumber = (dispNumber - dispNumber % 10) / 10;
+    }
+    else {
+        dispNumber = (dispNumber - dispNumber % Math.pow(10, -dot + 1));
+        dot--;
+        if(dot == 1) dot = 0;
+    }
+    refresh();
 }
 
 /**
@@ -126,4 +134,13 @@ function newNumber() {}
 function saveNumber() {
     (!firts) ? firts = dispNumber : second = dispNumber;
     dispNumber = 0;
+}
+
+// Keyboard input
+document.onkeydown = function(event) {
+    let key = String.fromCharCode(event.keyCode);
+    console.log(key);
+    if(key == 1) number(key);
+    else if(key == "=") res();
+    else operation(key);
 }
