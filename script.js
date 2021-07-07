@@ -29,6 +29,8 @@ const operate = function(a, b, op) {
         case "/":
             if(b == 0) return "ERROR"
             return divide(a, b);
+        case "%":
+            return dispNumber / 100;
     }
 }
 
@@ -58,10 +60,10 @@ function number(n) {
 function operation(s) {
     // Save the number
     saveNumber();
-    // Set the operation
-    operator = s;
     // Concadenate operations
     if(second) res();
+    // Set the operation
+    operator = s;
     dot = 0;
 }
 
